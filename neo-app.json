@@ -1,0 +1,63 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "GWQ",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "GWQ"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources",
+        "version": "1.28.15"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.28.15"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/ui5_execute_abap",
+      "target": {
+        "type": "destination",
+        "name": "INERGY_Gateway",
+        "entryPath": "/sap/bc/ui5_ui5"
+      },
+      "description": "INERGY Gateway"
+    },
+    {
+      "path": "/sap/bc/ui5_ui5",
+      "target": {
+        "type": "destination",
+        "name": "GWQ",
+        "entryPath": "/sap/bc/ui5_ui5"
+      },
+      "description": "GWQ"
+    }
+  ],
+  "cacheControl": [
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "*html"
+    },
+    {
+      "directive": "public",
+      "maxAge": 31536000
+    }
+  ]
+}

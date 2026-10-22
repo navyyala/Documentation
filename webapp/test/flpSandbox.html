@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+	<title>PO_PM_DOCS — FLP Sandbox</title>
+	<script type="text/javascript">
+		window["sap-ushell-config"] = {
+			defaultRenderer: "fiori2",
+			applications: {
+				"PMDocuments-display": {
+					additionalInformation: "SAPUI5.Component=PO_PM_DOCS",
+					applicationType: "URL",
+					url: "../",
+					navigationMode: "embedded"
+				}
+			}
+		};
+	</script>
+	<script src="../../test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
+	<script id="sap-ui-bootstrap"
+		src="../../resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.m,sap.ushell,sap.ui.core,sap.ui.layout"
+		data-sap-ui-theme="sap_fiori_3"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-async="true"
+		data-sap-ui-resourceroots='{"PO_PM_DOCS": "../"}'>
+	</script>
+	<script>
+		sap.ui.getCore().attachInit(function () {
+			sap.ushell.Container.createRenderer().placeAt("content");
+		});
+	</script>
+</head>
+<body class="sapUiBody" id="content"></body>
+</html>

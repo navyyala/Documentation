@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "PO_PM_DOCS",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#ZPM_DOCS-Display",
+        "navigationComponentName": "ZPM_DOCS",
+        "intentSemanticObject": "",
+        "intentAction": "",
+        "html5ApplicationName": "inergycreateorder",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "188dd2f9-83ae-45e0-892a-a8009ece98c9-1446654421443"
+        ],
+        "contentPackages": [
+            "323a62a8-857b-445c-99a0-57bcacc950d0-1425999481488"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Créer Ordre",
+        "subtitle": "",
+        "searchKeywords": "Créer Ordre,",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

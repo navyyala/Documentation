@@ -1,0 +1,55 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start UI5 Local Server",
+      "type": "shell",
+      "command": "npm run start-local",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": {
+        "pattern": { "regexp": "." },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting server",
+          "endsPattern": "Server started"
+        }
+      }
+    },
+    {
+      "label": "Start UI5 GWQ Server",
+      "type": "shell",
+      "command": "npm run start-gwq",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": {
+        "pattern": { "regexp": "." },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting server",
+          "endsPattern": "Server started"
+        }
+      }
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "npm run build",
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Deploy to GWD (ABAP)",
+      "type": "shell",
+      "command": "npm run deploy",
+      "group": "none",
+      "presentation": { "reveal": "always" }
+    }
+  ]
+}

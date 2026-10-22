@@ -1,0 +1,105 @@
+{
+    "resources": [
+        {
+            "name": "images/inergy_logo_u219.jpg"
+        },
+        {
+            "name": "images/inergy_logo.jpg"
+        },
+        {
+            "name": "images/room_plan.jpg"
+        },
+        {
+            "name": "MyRouter.js"
+        },
+        {
+            "name": "view/fragment/createOrder.fragment.xml"
+        },
+        {
+            "name": "view/fragment/addEditItem.fragment.xml"
+        },
+        {
+            "name": "view/fragment/canvas.fragment.xml"
+        },
+        {
+            "name": "view/fragment/logo.fragment.xml"
+        },
+        {
+            "name": "view/fragment/modifyOperation.fragment.xml"
+        },
+        {
+            "name": "view/Master.view.xml"
+        },
+        {
+            "name": "view/Detail.view.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "view/Master.controller.js"
+        },
+        {
+            "name": "view/Detail.controller.js"
+        },
+        {
+            "name": "view/App.controller.js"
+        },
+        {
+            "name": "view/NotFound.view.xml"
+        },
+        {
+            "name": "view/NotFound.controller.js"
+        },
+        {
+            "name": "preview_hidden.html"
+        },
+        {
+            "name": ".project.json"
+        },
+        {
+            "name": "model/metadata.xml"
+        },
+        {
+            "name": "localIndex.html"
+        },
+        {
+            "name": ".user.project.json"
+        },
+        {
+            "name": "i18n/messageBundle_fr.properties",
+            "raw": "messageBundle.properties"
+        },
+        {
+            "name": "i18n/messageBundle.properties",
+            "raw": "messageBundle.properties"
+        },
+        {
+            "name": "i18n/i18n_fr.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "flp-config.json"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        }
+    ]
+}

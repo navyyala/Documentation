@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGPM_DOCUMENTATIONS_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ACTTYPE" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ActType"/>
+                </Key>
+                <Property Name="ActType" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Activity type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActDesc" Type="Edm.String" Nullable="false" MaxLength="34" sap:label="Activity description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ATTACH" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DocType"/>
+                    <PropertyRef Name="Object"/>
+                    <PropertyRef Name="DocID"/>
+                    <PropertyRef Name="ObjectKey"/>
+                    <PropertyRef Name="DocVersion"/>
+                    <PropertyRef Name="DocPart"/>
+                </Key>
+                <Property Name="DocType" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Document Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Binaryfile" Type="Edm.Binary" Nullable="false" sap:label="Binary File" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mimetype" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Mime Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Base64" Type="Edm.String" Nullable="false" sap:label="Images" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Object" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Object" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocID" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ObjectKey" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Object key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocVersion" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Doc. Version" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocPart" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Document Part" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="DISPLAY_SETTINGS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Field"/>
+                </Key>
+                <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Field Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mandatory" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Flag Mandatory" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Enable" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Flag Enable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Visible" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Flag Visible" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lstar" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Activity type filter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="FUNCLEVEL" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Name"/>
+                </Key>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Name (func or equi)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description (func or equi)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ObjType" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="object type (F or E)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LowerLevel" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="lower level (flag X)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OrderAllowed" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Order creation allowed (flag X)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="7" sap:label="color HTML code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PathLayout" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Path of building layout" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Base64" Type="Edm.String" Nullable="false" sap:label="Code base 64" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="FUNCPARENT" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Level"/>
+                </Key>
+                <Property Name="Level" Type="Edm.Byte" Nullable="false" sap:label="Level" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Name (func or equi)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description (func or equi)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ObjType" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="object type (F or E)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PathLayout" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Path of building layout" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Base64" Type="Edm.String" Nullable="false" sap:label="Code base64" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="FUNCLOC" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Name"/>
+                </Key>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="DOCLIST" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DocType"/>
+                    <PropertyRef Name="DocPart"/>
+                    <PropertyRef Name="DocID"/>
+                    <PropertyRef Name="DocVersion"/>
+                </Key>
+                <Property Name="DocType" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Document Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocStatus" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Document Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocPart" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Document Part" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FuncLoc" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Functional loc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocID" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Equipment" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Equipment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocVersion" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Doc. Version" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocDescr" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZGPM_DOCUMENTATIONS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ACTTYPESet" EntityType="ZGPM_DOCUMENTATIONS_SRV.ACTTYPE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ATTACHSet" EntityType="ZGPM_DOCUMENTATIONS_SRV.ATTACH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="DISPLAY_SETTINGSSet" EntityType="ZGPM_DOCUMENTATIONS_SRV.DISPLAY_SETTINGS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="FUNCLEVELSet" EntityType="ZGPM_DOCUMENTATIONS_SRV.FUNCLEVEL" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="FUNCPARENTSet" EntityType="ZGPM_DOCUMENTATIONS_SRV.FUNCPARENT" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="FUNCLOCSet" EntityType="ZGPM_DOCUMENTATIONS_SRV.FUNCLOC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="DOCLISTSet" EntityType="ZGPM_DOCUMENTATIONS_SRV.DOCLIST" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://sdctwd0024.ad.ponet:8000/sap/opu/odata/sap/ZGPM_DOCUMENTATIONS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://sdctwd0024.ad.ponet:8000/sap/opu/odata/sap/ZGPM_DOCUMENTATIONS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

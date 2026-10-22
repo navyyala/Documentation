@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# UI5 Tooling cache
+.ui5/
+
+# npm
+npm-debug.log*

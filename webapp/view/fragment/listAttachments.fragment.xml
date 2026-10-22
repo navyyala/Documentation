@@ -1,0 +1,46 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
+	xmlns:ui="sap.suite.ui.commons" xmlns:uico="sap.ui.commons" xmlns="sap.m" controllerName="PO_PM_DOCS.view.Detail">
+	<l:VerticalLayout width="100%">
+		<Text text="{list>/name} - {list>/title}" class="titleListAttachmtUI"/>
+		<Table id="tableAttachments" noDataText="{i18n>noAttachmentDocs}" items="{/DOCLISTSet}" fixedLayout="false" width="100%" visible="true">
+			<columns>
+				<Column id="colDocType">
+					<header>
+						<Label id="lblDocType" text="{i18n>textFragmentLblDocType}"/>
+					</header>
+				</Column>
+				<Column id="colDocNb">
+					<header>
+						<Label id="lblDocNb" text="{i18n>textFragmentLblDocNb}"/>
+					</header>
+				</Column>
+				<Column id="colDocVersion">
+					<header>
+						<Label id="lblDocVersion" text="{i18n>textFragmentLblDocVersion}"/>
+					</header>
+				</Column>
+				<Column id="colDocStatus">
+					<header>
+						<Label id="lblDocStatus" text="{i18n>textFragmentLblDocStatus}"/>
+					</header>
+				</Column>
+				<Column id="colDocDescription">
+					<header>
+						<Label id="lblDocDescription" text="{i18n>textFragmentLblDocDescription}"/>
+					</header>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem id="itemsAttachments" press="onAttachmentsSelect" type="Navigation">
+					<cells>
+						<Text id="txtDocType" text="{DocType}"/>
+						<Text id="txtDocNb" text="{DocID}"/>
+						<Text id="txtDocVersion" text="{DocVersion}"/>
+						<Text id="txtDocStatus" text="{DocStatus}"/>
+						<Text id="txtDocDescription" text="{DocDescr}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</l:VerticalLayout>
+</core:FragmentDefinition>

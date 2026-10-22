@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "ui5-language-assistant.trace.server": "off",
+  "sap.ux.help.show.fiori.helper": true
+}

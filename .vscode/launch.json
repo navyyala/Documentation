@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start PO_PM_DOCS (local proxy → GWD)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080/test/flpSandbox.html",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Start UI5 Local Server",
+      "sourceMaps": true
+    },
+    {
+      "name": "Start PO_PM_DOCS (GWQ)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080/test/flpSandbox.html",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Start UI5 GWQ Server",
+      "sourceMaps": true
+    }
+  ]
+}

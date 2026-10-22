@@ -1,0 +1,131 @@
+{
+  "_version": "1.58.0",
+  "sap.app": {
+    "id": "PO_PM_DOCS",
+    "type": "application",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.1.0"
+    },
+    "ach": "PM",
+    "resources": "resources.json",
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZGPM_DOCUMENTATIONS_SRV/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "model/metadata.xml",
+          "annotations": []
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://documents"
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_fiori_3",
+      "sap_fiori_3_dark",
+      "sap_high_contrast_black",
+      "sap_high_contrast_white"
+    ]
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "PO_PM_DOCS.view.App",
+      "type": "XML",
+      "async": false,
+      "id": "appRootView"
+    },
+    "dependencies": {
+      "minUI5Version": "1.71.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.layout": {},
+        "sap.ui.core": {},
+        "sap.ushell": {
+          "lazy": true
+        },
+        "sap.suite.ui.commons": {
+          "lazy": true
+        }
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "handleValidation": true,
+    "models": {
+      "": {
+        "dataSource": "mainService",
+        "type": "sap.ui.model.odata.ODataModel",
+        "preload": true,
+        "settings": {
+          "json": true,
+          "loadMetadataAsync": true
+        }
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "PO_PM_DOCS.i18n.messageBundle",
+          "supportedLocales": ["", "en", "es", "fr", "pt"],
+          "fallbackLocale": ""
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "PO_PM_DOCS.MyRouter",
+        "viewType": "XML",
+        "viewPath": "PO_PM_DOCS.view",
+        "targetAggregation": "detailPages",
+        "clearTarget": false
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "main",
+          "view": "Master",
+          "targetAggregation": "masterPages",
+          "targetControl": "idAppControl",
+          "subroutes": [
+            {
+              "pattern": "{entity}/:tab:",
+              "name": "detail",
+              "view": "Detail"
+            }
+          ]
+        },
+        {
+          "name": "catchallMaster",
+          "view": "Master",
+          "targetAggregation": "masterPages",
+          "targetControl": "idAppControl",
+          "subroutes": [
+            {
+              "pattern": ":all*:",
+              "name": "catchallDetail",
+              "view": "NotFound",
+              "transition": "show"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}
